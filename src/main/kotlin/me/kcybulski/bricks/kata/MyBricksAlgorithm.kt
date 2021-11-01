@@ -17,8 +17,8 @@ class MyBricksAlgorithm : Algorithm {
 
     override suspend fun move(last: MoveTrigger): Brick =
         DuoBrick.of(
-            Block.of(0, 0).getOrHandle { throw IllegalArgumentException() },
-            Block.of(1, 0).getOrHandle { throw IllegalArgumentException() },
+            Block(0, 0),
+            Block(1, 0)
         ).getOrHandle { throw IllegalArgumentException() }
 
 }
