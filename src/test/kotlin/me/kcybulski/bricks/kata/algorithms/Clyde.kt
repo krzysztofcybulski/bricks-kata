@@ -28,12 +28,12 @@ class Clyde : Algorithm {
     }
 
     private fun move(last: MoveTrigger.OpponentMoved): Brick =
-        DuoBrick.of(*last.brick.blocks.map { it.opposite() }.toTypedArray()).get()
+        DuoBrick.of(last.brick.blocks.first().opposite(), last.brick.blocks[1].opposite()).get()
 
-    private fun Block.opposite() = Block.of(
+    private fun Block.opposite() = Block(
         x = size - x - 1,
         y = size - y - 1
-    ).get()
+    )
 }
 
 

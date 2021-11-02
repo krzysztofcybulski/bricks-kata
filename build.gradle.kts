@@ -34,9 +34,9 @@ tasks.withType<Test> {
 
 
 sourceDependencies {
-    source("https://github.com/krzysztofcybulski/bricks.git::game::299baea14c042f2ec8fe2a76ce967127a7f4c199##974bdf37d73431074dc23ccd865568a5b8ffd51c2e0b69781918c5c6666dda25")
-    source("https://github.com/krzysztofcybulski/bricks.git::client::299baea14c042f2ec8fe2a76ce967127a7f4c199##97551528560d060e95bdc095b792e15fb06d09007b14154eaafeedb1a9062875")
-    source("https://github.com/krzysztofcybulski/bricks.git::test::299baea14c042f2ec8fe2a76ce967127a7f4c199##feb76cc2ea60ca5ed00912e7122a77af146291296c1fa055bc10189fa26c4fa8")
-    source("https://github.com/krzysztofcybulski/bricks.git::shared-web::299baea14c042f2ec8fe2a76ce967127a7f4c199##1d631b65cd145699d701dcad9437e1a244d3e60a3cbffc347cf691cf8ef84261")
-    source("https://github.com/krzysztofcybulski/bricks.git::events::299baea14c042f2ec8fe2a76ce967127a7f4c199##09478e4238358a53664aac9308a130ec0470ec04bbc9c7ff66e22b36255aed6a")
+    source("https://github.com/krzysztofcybulski/bricks.git::game::0bdb31469576228ecdff5ca7e2362d36297d8224##e4b1196876b511c7321f054d8c6aba066d028ed8815adc3940c926c6981ca93a")
+    source("https://github.com/krzysztofcybulski/bricks.git::client::0bdb31469576228ecdff5ca7e2362d36297d8224##11729b86ae6d9eb6549486c11fe94367b964bcfd72693d549aebed443c2d0aec")
+    source("https://github.com/krzysztofcybulski/bricks.git::test::0bdb31469576228ecdff5ca7e2362d36297d8224##feb76cc2ea60ca5ed00912e7122a77af146291296c1fa055bc10189fa26c4fa8")
+    source("https://github.com/krzysztofcybulski/bricks.git::shared-web::0bdb31469576228ecdff5ca7e2362d36297d8224##6eeff2082c07c41f098417a8287e460d781a51a6deb04134bc228b21c882717c")
+    source("https://github.com/krzysztofcybulski/bricks.git::events::0bdb31469576228ecdff5ca7e2362d36297d8224##09478e4238358a53664aac9308a130ec0470ec04bbc9c7ff66e22b36255aed6a")
 }
