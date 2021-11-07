@@ -23,12 +23,22 @@ class Blinky : Algorithm {
 
     override suspend fun move(last: MoveTrigger): Brick = when (last) {
         is MoveTrigger.FirstMove -> horizontal(0, 0).get()
-        is MoveTrigger.OpponentMoved -> findEmpty(horizontal(0, 0).get())
+            .also(this::save)
+        is MoveTrigger.OpponentMoved -> {
+            save(last.brick)
+            findEmpty(horizontal(0, 0).get())
+                .also(this::save)
+        }
+    }
+
+    private fun save(brick: Brick) {
+        brick.blocks.forEach { map[it.y][it.x] = true }
     }
 
     private fun findEmpty(brick: Brick): Brick = when {
         brick.blocks.all { isEmpty(it) } -> brick
         brick.blocks.any { it.x >= map.size } -> findEmpty(horizontal(0, brick.blocks.first().y + 1).get())
+        brick.blocks.any { it.y >= map.size } -> horizontal(0, 0).get()
         else -> findEmpty(horizontal(brick.blocks.first().x + 2, brick.blocks.first().y).get())
     }
 
