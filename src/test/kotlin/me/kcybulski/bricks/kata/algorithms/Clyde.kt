@@ -6,10 +6,10 @@ import me.kcybulski.bricks.game.Algorithm
 import me.kcybulski.bricks.game.Block
 import me.kcybulski.bricks.game.Brick
 import me.kcybulski.bricks.game.DuoBrick
+import me.kcybulski.bricks.game.GameInitialized
 import me.kcybulski.bricks.game.Identity
 import me.kcybulski.bricks.game.InvalidBrick
 import me.kcybulski.bricks.game.MoveTrigger
-import me.kcybulski.bricks.game.NewGame
 import me.kcybulski.bricks.test.horizontal
 
 class Clyde : Algorithm {
@@ -18,7 +18,7 @@ class Clyde : Algorithm {
 
     override val identity: Identity = Identity("Clyde")
 
-    override suspend fun initialize(game: NewGame) {
+    override suspend fun initialize(game: GameInitialized) {
         size = game.size
     }
 

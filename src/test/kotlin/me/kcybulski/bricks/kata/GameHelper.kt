@@ -5,10 +5,18 @@ import me.kcybulski.bricks.game.AlgorithmsPair
 import me.kcybulski.bricks.game.EndedGame
 import me.kcybulski.bricks.game.GameCoordinator
 import me.kcybulski.bricks.game.GameSettings
+import me.kcybulski.bricks.game.GamesFactory
+
+private val settings = GameSettings(
+    initTime = 1000L,
+    moveTime = 100L,
+    randomBrickChance = 0.0
+)
 
 suspend fun play(algorithms: AlgorithmsPair): EndedGame = GameCoordinator(
     algorithms,
-    GameSettings(1000L, 100L),
+    settings,
+    GamesFactory(settings),
     EventBus()
 )
-    .play(algorithms.first.identity, 10)
+    .play(algorithms.first.identity, 11)

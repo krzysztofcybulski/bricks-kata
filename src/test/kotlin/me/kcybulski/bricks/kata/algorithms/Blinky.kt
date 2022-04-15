@@ -5,6 +5,7 @@ import arrow.core.getOrHandle
 import me.kcybulski.bricks.game.Algorithm
 import me.kcybulski.bricks.game.Block
 import me.kcybulski.bricks.game.Brick
+import me.kcybulski.bricks.game.GameInitialized
 import me.kcybulski.bricks.game.Identity
 import me.kcybulski.bricks.game.InvalidBrick
 import me.kcybulski.bricks.game.MoveTrigger
@@ -17,7 +18,7 @@ class Blinky : Algorithm {
 
     override val identity: Identity = Identity("Blinky")
 
-    override suspend fun initialize(game: NewGame) {
+    override suspend fun initialize(game: GameInitialized) {
         map = Array(game.size) { Array(game.size) { false } }
     }
 
