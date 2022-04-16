@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("me.kcybulski.bricks:bricks-client:1.4")
+    implementation("me.kcybulski.bricks:bricks-client:2.0")
     testImplementation("me.kcybulski.nexum:event-store:1.5.0")
     testImplementation("me.kcybulski.bricks:bricks-events:1.0")
     testImplementation("me.kcybulski.bricks:bricks-test:1.0")
