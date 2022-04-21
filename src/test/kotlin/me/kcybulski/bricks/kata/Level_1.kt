@@ -11,7 +11,7 @@ class Level_1 : FunSpec({
 
     test("Win with Clyde") {
         assertThat(play(myAlgorithm vs Clyde()))
-            .wonBy(myAlgorithm.identity)
+            .wonBy(myAlgorithm)
     }
 
 })

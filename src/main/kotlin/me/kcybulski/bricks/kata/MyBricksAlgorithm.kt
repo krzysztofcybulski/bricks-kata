@@ -1,11 +1,11 @@
 package me.kcybulski.bricks.kata
 
 import me.kcybulski.bricks.client.UserAlgorithm
-import me.kcybulski.bricks.game.Block
-import me.kcybulski.bricks.game.Brick
-import me.kcybulski.bricks.game.DuoBrick
-import me.kcybulski.bricks.game.GameInitialized
-import me.kcybulski.bricks.game.MoveTrigger
+import me.kcybulski.bricks.api.Block
+import me.kcybulski.bricks.api.Brick
+import me.kcybulski.bricks.api.DuoBrick
+import me.kcybulski.bricks.api.GameInitialized
+import me.kcybulski.bricks.api.MoveTrigger
 
 class MyBricksAlgorithm : UserAlgorithm() {
 

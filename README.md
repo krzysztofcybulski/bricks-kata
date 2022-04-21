@@ -52,7 +52,7 @@ Then you can just join specific lobby, by running `BricksWebClient` in you `main
 
 ```kotlin
 fun main() = runBlocking {
-    BricksWebClient("bricks-game.herokuapp.com")
+    BricksWebClient("bricks-api.kcybulski.me")
         .register(MyBricksAlgorithm())
 }
 ```

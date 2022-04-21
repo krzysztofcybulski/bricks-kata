@@ -11,7 +11,7 @@ class Level_2 : FunSpec({
 
     test("Win with Blinky") {
         assertThat(play(myAlgorithm vs Blinky()))
-            .wonBy(myAlgorithm.identity)
+            .wonBy(myAlgorithm)
     }
 
 })

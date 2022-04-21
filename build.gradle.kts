@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "me.kcybulski.bricks.kata"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 java {
     sourceCompatibility = VERSION_17
@@ -18,10 +18,9 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("me.kcybulski.bricks:bricks-client:2.0")
-    testImplementation("me.kcybulski.nexum:event-store:1.5.0")
-    testImplementation("me.kcybulski.bricks:bricks-events:1.0")
-    testImplementation("me.kcybulski.bricks:bricks-test:1.0")
+    implementation("me.kcybulski.bricks:bricks-client:2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    testImplementation("me.kcybulski.bricks:bricks-test:2.1")
     testImplementation("io.kotest:kotest-runner-junit5-jvm:5.0.0.M3")
     testImplementation("io.kotest:kotest-assertions-core-jvm:5.0.0.M3")
 }

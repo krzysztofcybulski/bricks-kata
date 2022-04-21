@@ -1,12 +1,12 @@
 package me.kcybulski.bricks.kata.algorithms
 
-import me.kcybulski.bricks.game.Algorithm
-import me.kcybulski.bricks.game.Block
-import me.kcybulski.bricks.game.Brick
-import me.kcybulski.bricks.game.DuoBrick
-import me.kcybulski.bricks.game.GameInitialized
-import me.kcybulski.bricks.game.Identity
-import me.kcybulski.bricks.game.MoveTrigger
+import me.kcybulski.bricks.api.Algorithm
+import me.kcybulski.bricks.api.Block
+import me.kcybulski.bricks.api.Brick
+import me.kcybulski.bricks.api.DuoBrick
+import me.kcybulski.bricks.api.GameInitialized
+import me.kcybulski.bricks.api.Identity
+import me.kcybulski.bricks.api.MoveTrigger
 import me.kcybulski.bricks.test.horizontal
 
 class Clyde : Algorithm {
