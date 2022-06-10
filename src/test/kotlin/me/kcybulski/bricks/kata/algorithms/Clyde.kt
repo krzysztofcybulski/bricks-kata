@@ -15,8 +15,8 @@ class Clyde : Algorithm {
 
     override val identity: Identity = Identity("Clyde")
 
-    override suspend fun initialize(game: GameInitialized) {
-        size = game.size
+    override suspend fun initialize(gameInitialized: GameInitialized) {
+        size = gameInitialized.size
     }
 
     override suspend fun move(last: MoveTrigger): Brick = when (last) {

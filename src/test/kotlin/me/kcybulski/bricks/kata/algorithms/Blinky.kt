@@ -14,8 +14,8 @@ class Blinky : Algorithm {
 
     override val identity: Identity = Identity("Blinky")
 
-    override suspend fun initialize(game: GameInitialized) {
-        map = Array(game.size) { Array(game.size) { false } }
+    override suspend fun initialize(gameInitialized: GameInitialized) {
+        map = Array(gameInitialized.size) { Array(gameInitialized.size) { false } }
     }
 
     override suspend fun move(last: MoveTrigger): Brick = when (last) {

@@ -1,10 +1,10 @@
 package me.kcybulski.bricks.kata.algorithms
 
-import me.kcybulski.bricks.game.Algorithm
-import me.kcybulski.bricks.game.Brick
-import me.kcybulski.bricks.game.GameInitialized
-import me.kcybulski.bricks.game.Identity
-import me.kcybulski.bricks.game.MoveTrigger
+import me.kcybulski.bricks.api.Algorithm
+import me.kcybulski.bricks.api.Brick
+import me.kcybulski.bricks.api.GameInitialized
+import me.kcybulski.bricks.api.Identity
+import me.kcybulski.bricks.api.MoveTrigger
 import me.kcybulski.bricks.test.horizontal
 import me.kcybulski.bricks.test.vertical
 
@@ -14,10 +14,10 @@ class Inky : Algorithm {
 
     override val identity: Identity = Identity("Inky")
 
-    override suspend fun initialize(game: GameInitialized) {
-        (0 until game.size - 1)
+    override suspend fun initialize(gameInitialized: GameInitialized) {
+        (0 until gameInitialized.size - 1)
             .forEach { y ->
-                (0 until game.size - 1).forEach { x ->
+                (0 until gameInitialized.size - 1).forEach { x ->
                     horizontal(x, y).also { emptyPlaces += it }
                     vertical(x, y).also { emptyPlaces += it }
                 }
